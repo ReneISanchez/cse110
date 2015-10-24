@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText android:id="@+id/edit_message1"
+        android:layout_weight="0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message1" />
+
+    <EditText android:id="@+id/edit_message2"
+        android:layout_weight="0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message2" />
+
+    <EditText android:id="@+id/edit_message3"
+        android:layout_weight="0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message3" />
+
+    <EditText android:id="@+id/edit_message4"
+        android:layout_weight="0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message4" />
+
+    <EditText android:id="@+id/edit_message5"
+        android:layout_weight="0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage" />
+</LinearLayout>
