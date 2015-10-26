@@ -2,41 +2,178 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <EditText android:id="@+id/edit_message1"
-        android:layout_weight="0"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message1" />
+    <LinearLayout android:id="@+id/linLayout_1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible">
 
-    <EditText android:id="@+id/edit_message2"
-        android:layout_weight="0"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message2" />
+        <EditText android:id="@+id/edit_message1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message1"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:layout_gravity="right"
+            android:onClick="removeClass" />
+    </LinearLayout>
 
-    <EditText android:id="@+id/edit_message3"
-        android:layout_weight="0"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message3" />
+    <LinearLayout android:id="@+id/linLayout_2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal">
 
-    <EditText android:id="@+id/edit_message4"
-        android:layout_weight="0"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message4" />
+        <EditText android:id="@+id/edit_message2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message2"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="removeClass"
+            android:layout_gravity="right" />
+    </LinearLayout>
 
-    <EditText android:id="@+id/edit_message5"
-        android:layout_weight="0"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_message5" />
+    <LinearLayout android:id="@+id/linLayout_3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
-    <Button
+        <EditText android:id="@+id/edit_message3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message3"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="removeClass"
+            android:src="@drawable/ic_remove"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/linLayout_4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText android:id="@+id/edit_message4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message4"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="removeClass"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/linLayout_5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText android:id="@+id/edit_message5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message5"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="removeClass"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/linLayout_6"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText android:id="@+id/edit_message6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message6"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="removeClass"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/linLayout_7"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText android:id="@+id/edit_message7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message7"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="removeClass"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/linLayout_8"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText android:id="@+id/edit_message8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message8"
+            android:gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:layout_gravity="right"
+            android:onClick="removeClass" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="addClass" />
+    </LinearLayout>
+
+
 </LinearLayout>

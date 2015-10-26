@@ -12,21 +12,48 @@ import java.util.ArrayList;
 
 public class DisplayMessageActivity extends ActionBarActivity {
 
+    final static int DEFAULT_CLASS_NUM = 4;
+
+    int curr_num_classes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_display_message);
 
-        //Get the message from the intent
+        //Get the items from the intent
         Intent intent = getIntent();
-        ArrayList<String> classList = intent.getStringArrayListExtra("classList");
-        //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        ArrayList<String> classList = intent.getStringArrayListExtra(MainActivity.EXTRA_CLASSLIST);
+        curr_num_classes = intent.getIntExtra(MainActivity.EXTRA_NUM, DEFAULT_CLASS_NUM);
 
         //Create the text view
+        String setText = "CLASSES: ";
+        for (int i=0; i<curr_num_classes; i++){
+            setText = setText + "\nClass "+ (i+1) + ": " + classList.get(i);
+        }
+        /*switch (curr_num_classes){
+            case (8):
+                setText = setText + "\nClass 8: " + classList.get(7);
+            case (7):
+                setText = setText + "\nClass 7: " + classList.get(6);
+            case (6):
+                setText = setText + "\nClass 6: " + classList.get(5);
+            case (5):
+                setText = setText + "\nClass 5: " + classList.get(4);
+            case (4):
+                setText = setText + "\nClass 4: " + classList.get(3);
+            case (3):
+                setText = setText + "\nClass 3: " + classList.get(2);
+            case (2):
+                setText = setText + "\nClass 2: " + classList.get(1);
+            default:
+                setText = setText + "\nClass 1: " + classList.get(0) ;
+                break;
+        }*/
+
+
         TextView textView = new TextView(this);
         textView.setTextSize(30);
-        textView.setText("Class One: " + classList.get(0) + "\nClass Two: " +  classList.get(1) + "\nClass Three: " +
-                classList.get(2) + "\nClass Four: " + classList.get(3) + "\nClass Five: " + classList.get(4));
+        textView.setText(setText);
 
         // Set the text view as the activity layout
         setContentView(textView);

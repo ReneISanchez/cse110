@@ -2,13 +2,25 @@
 <resources>
 
     <string name="app_name">Will I Survive?</string>
+    <string name="linLayout_1">LinearLayout 1</string>
+    <string name="linLayout_2">LinearLayout 2</string>
+    <string name="linLayout_3">LinearLayout 3</string>
+    <string name="linLayout_4">LinearLayout 4</string>
+    <string name="linLayout_5">LinearLayout 5</string>
+    <string name="linLayout_6">LinearLayout 6</string>
+    <string name="linLayout_7">LinearLayout 7</string>
+    <string name="linLayout_8">LinearLayout 8</string>
     <string name="edit_message1">Enter first class</string>
     <string name="edit_message2">Enter second class</string>
     <string name="edit_message3">Enter third class</string>
     <string name="edit_message4">Enter fourth class</string>
-    <string name="edit_message5">Enter fifth class</string>
+    <string name="edit_message5">Enter fifth class?</string>
+    <string name="edit_message6">What are you doing?</string>
+    <string name="edit_message7">Uhh, I don\'t think so</string>
+    <string name="edit_message8">OH DEAR LAWD NO!</string>
     <string name="Hello_World">Hello World</string>
     <string name="button_send">Enter classes</string>
+    <string name="button_add">Add a class</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
