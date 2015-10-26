@@ -145,25 +145,18 @@ public class MainActivity extends ActionBarActivity {
 
         switch (curr_num_classes) {
             case (1):
-                System.out.println("started");
                 classTwoLayout.setVisibility(View.GONE);
             case (2):
-                System.out.println("from");
                 classThreeLayout.setVisibility(View.GONE);
             case (3):
-                System.out.println("the");
                 classFourLayout.setVisibility(View.GONE);
             case (4):
-                System.out.println("bottom");
                 classFiveLayout.setVisibility(View.GONE);
             case (5):
-                System.out.println("now");
                 classSixLayout.setVisibility(View.GONE);
             case (6):
-                System.out.println("we\'re");
                 classSevenLayout.setVisibility(View.GONE);
             case (7):
-                System.out.println("here");
                 classEightLayout.setVisibility(View.GONE);
                 break;
             default:
