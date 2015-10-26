@@ -22,4 +22,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('/home/kermit/Desktop/cse110/cse110/Android-master/MyApplication/libs/jsoup-1.8.3.jar')
 }
