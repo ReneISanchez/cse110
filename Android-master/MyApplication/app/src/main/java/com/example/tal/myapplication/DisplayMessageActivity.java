@@ -17,14 +17,18 @@ import java.util.ArrayList;
 
 public class DisplayMessageActivity extends ActionBarActivity{
 
+    final static int DEFAULT_CLASS_NUM = 4;
+    int curr_num_classes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_display_message);
 
-        //Get the message from the intent
+        //Get the items from the intent
         Intent intent = getIntent();
-        final ArrayList<String> classList = intent.getStringArrayListExtra("classList");
+        final ArrayList<String> classList = intent.getStringArrayListExtra(MainActivity.EXTRA_CLASSLIST);
+        curr_num_classes = intent.getIntExtra(MainActivity.EXTRA_NUM, DEFAULT_CLASS_NUM);
 
         //Create the text view
         final TextView textView = new TextView(this);
@@ -54,8 +58,14 @@ public class DisplayMessageActivity extends ActionBarActivity{
                                workHours.add(cols.get(7).text());
                            }
 
-                           textView.setText("Class One: " + classList.get(0) + "\nClass Two: " + classList.get(1) + "\nClass Three: " +
-                                   classList.get(2) + "\nClass Four: " + classList.get(3) + "\nClass Five: " + classList.get(4) + "\nQuery: " + workHours.get(0));
+                               String setText = "CLASSES: ";
+                               for (int i=0; i<curr_num_classes; i++){
+                                   setText = setText + "\nClass "+ (i+1) + ": " + classList.get(i);
+                               }
+
+                               setText = setText + "\nHours for first class: " + workHours.get(0);
+
+                           textView.setText(setText);
 
                            // Set the text view as the activity layout
                            setContentView(textView);
