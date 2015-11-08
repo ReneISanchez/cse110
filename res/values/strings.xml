@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Will I Survive?</string>
+    <string name="linLayout_1">LinearLayout 1</string>
+    <string name="linLayout_2">LinearLayout 2</string>
+    <string name="linLayout_3">LinearLayout 3</string>
+    <string name="linLayout_4">LinearLayout 4</string>
+    <string name="linLayout_5">LinearLayout 5</string>
+    <string name="linLayout_6">LinearLayout 6</string>
+    <string name="linLayout_7">LinearLayout 7</string>
+    <string name="linLayout_8">LinearLayout 8</string>
+    <string name="edit_message1">1st class</string>
+    <string name="edit_message2">2nd class</string>
+    <string name="edit_message3">3rd class</string>
+    <string name="edit_message4">4th class</string>
+    <string name="edit_message5">5th class</string>
+    <string name="edit_message6">6th class</string>
+    <string name="edit_message7">7th class</string>
+    <string name="edit_message8">8th class</string>
+    <string name="pEdit_message1">(optional) prof name</string>
+    <string name="pEdit_message2">(optional) prof name</string>
+    <string name="pEdit_message3">(optional) prof name</string>
+    <string name="pEdit_message4">(optional) prof name</string>
+    <string name="pEdit_message5">(optional) prof name??</string>
+    <string name="pEdit_message6">What are you doing?</string>
+    <string name="pEdit_message7">Uhh, I don\'t think so</string>
+    <string name="pEdit_message8">OH DEAR LAWD NO!</string>
+    <string name="Hello_World">Hello World</string>
+    <string name="button_send">Enter classes</string>
+    <string name="button_add">Add a class</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_massage">My Message</string>
+
+</resources>

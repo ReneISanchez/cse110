@@ -1,0 +1,207 @@
+package com.example.tal.myapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends ActionBarActivity {
+    public final static String EXTRA_NUM = "com.example.tal.myapplication._numClasses";
+    public final static String EXTRA_CLASSLIST = "com.example.tal.myapplication._Classlist";
+    public final static String EXTRA_PROFLIST = "com.example.tal.myapplication._ProfList";
+    public List<String> classList;
+    public List<String> profList;
+
+    int curr_num_classes;
+    LinearLayout classOneLayout;
+    LinearLayout classTwoLayout;
+    LinearLayout classThreeLayout;
+    LinearLayout classFourLayout;
+    LinearLayout classFiveLayout;
+    LinearLayout classSixLayout;
+    LinearLayout classSevenLayout;
+    LinearLayout classEightLayout;
+
+    EditText classOne;
+    EditText classTwo;
+    EditText classThree;
+    EditText classFour;
+    EditText classFive;
+    EditText classSix;
+    EditText classSeven;
+    EditText classEight;
+
+    EditText pClassOne;
+    EditText pClassTwo;
+    EditText pClassThree;
+    EditText pClassFour;
+    EditText pClassFive;
+    EditText pClassSix;
+    EditText pClassSeven;
+    EditText pClassEight;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        classOneLayout = (LinearLayout) findViewById(R.id.linLayout_1);
+        classTwoLayout = (LinearLayout) findViewById(R.id.linLayout_2);
+        classThreeLayout = (LinearLayout) findViewById(R.id.linLayout_3);
+        classFourLayout = (LinearLayout) findViewById(R.id.linLayout_4);
+        classFiveLayout = (LinearLayout) findViewById(R.id.linLayout_5);
+        classSixLayout = (LinearLayout) findViewById(R.id.linLayout_6);
+        classSevenLayout = (LinearLayout) findViewById(R.id.linLayout_7);
+        classEightLayout = (LinearLayout) findViewById(R.id.linLayout_8);
+
+        classOne = (EditText) findViewById(R.id.edit_message1);
+        classTwo = (EditText) findViewById(R.id.edit_message2);
+        classThree = (EditText) findViewById(R.id.edit_message3);
+        classFour = (EditText) findViewById(R.id.edit_message4);
+        classFive = (EditText) findViewById(R.id.edit_message5);
+        classSix = (EditText) findViewById(R.id.edit_message6);
+        classSeven = (EditText) findViewById(R.id.edit_message7);
+        classEight = (EditText) findViewById(R.id.edit_message8);
+
+        pClassOne = (EditText) findViewById(R.id.pEdit_message1);
+        pClassTwo = (EditText) findViewById(R.id.pEdit_message2);
+        pClassThree = (EditText) findViewById(R.id.pEdit_message3);
+        pClassFour = (EditText) findViewById(R.id.pEdit_message4);
+        pClassFive = (EditText) findViewById(R.id.pEdit_message5);
+        pClassSix = (EditText) findViewById(R.id.pEdit_message6);
+        pClassSeven = (EditText) findViewById(R.id.pEdit_message7);
+        pClassEight = (EditText) findViewById(R.id.pEdit_message8);
+
+        curr_num_classes = 4;
+
+        HideShow();
+
+    }
+
+
+    /** Called when the user clicks the Send button */
+    public void sendMessage(View view) {
+        classList = new ArrayList<String>();
+        profList = new ArrayList<String>();
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+
+        if (curr_num_classes >= 1) {
+            classList.add(classOne.getText().toString());
+            profList.add(pClassOne.getText().toString());
+        }
+        if (curr_num_classes >= 2) {
+            classList.add(classTwo.getText().toString());
+            profList.add(pClassTwo.getText().toString());
+        }
+        if (curr_num_classes >= 3) {
+            classList.add(classThree.getText().toString());
+            profList.add(pClassThree.getText().toString());
+        }
+        if (curr_num_classes >= 4) {
+            classList.add(classFour.getText().toString());
+            profList.add(pClassFour.getText().toString());
+        }
+        if (curr_num_classes >= 5) {
+            classList.add(classFive.getText().toString());
+            profList.add(pClassFive.getText().toString());
+        }
+        if (curr_num_classes >= 6) {
+            classList.add(classSix.getText().toString());
+            profList.add(pClassSix.getText().toString());
+        }
+        if (curr_num_classes >= 7) {
+            classList.add(classSeven.getText().toString());
+            profList.add(pClassSeven.getText().toString());
+        }
+        if (curr_num_classes >= 8) {
+            classList.add(classEight.getText().toString());
+            profList.add(pClassEight.getText().toString());
+        }
+
+        //intent.putStringArrayListExtra(EXTRA_CLASSLIST, (ArrayList<Tuple>) classList);
+        intent.putExtra(EXTRA_CLASSLIST, (ArrayList<String>) classList);
+        intent.putExtra(EXTRA_PROFLIST, (ArrayList<String>) profList);
+        intent.putExtra(EXTRA_NUM, curr_num_classes);
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    public void removeClass(View view){
+        if (curr_num_classes > 1) {
+            curr_num_classes--;
+            HideShow();
+        }
+        // what happens if you have something in the text of one of the EditTexts?
+    }
+
+    public void addClass(View view){
+        if (curr_num_classes < 8) {
+            curr_num_classes++;
+            HideShow();
+        }
+    }
+
+    private void HideShow(){
+        classOneLayout.setVisibility(View.VISIBLE);
+        classTwoLayout.setVisibility(View.VISIBLE);
+        classThreeLayout.setVisibility(View.VISIBLE);
+        classFourLayout.setVisibility(View.VISIBLE);
+        classFiveLayout.setVisibility(View.VISIBLE);
+        classSixLayout.setVisibility(View.VISIBLE);
+        classSevenLayout.setVisibility(View.VISIBLE);
+        classEightLayout.setVisibility(View.VISIBLE);
+
+        switch (curr_num_classes) {
+            case (1):
+                classTwoLayout.setVisibility(View.GONE);
+            case (2):
+                classThreeLayout.setVisibility(View.GONE);
+            case (3):
+                classFourLayout.setVisibility(View.GONE);
+            case (4):
+                classFiveLayout.setVisibility(View.GONE);
+            case (5):
+                classSixLayout.setVisibility(View.GONE);
+            case (6):
+                classSevenLayout.setVisibility(View.GONE);
+            case (7):
+                classEightLayout.setVisibility(View.GONE);
+                break;
+            default:
+                System.out.println("Error hiding entries: curr_num_classes = " + curr_num_classes);
+
+        }
+    }
+
+
+}
